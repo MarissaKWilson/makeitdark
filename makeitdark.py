@@ -23,7 +23,7 @@ injectable = BEGIN_MARKER + " \n\
     let webviews = document.querySelectorAll(\".TeamView webview\");  \n\
    \n\
     /* Fetch CSS in parallel ahead of time from cdn host */  \n\
-    const cssPath = 'https://raw.githubusercontent.com/jszklarz-haventec/makeitdark/master/darkreader.css';  \n\
+    const cssPath = 'https://raw.githubusercontent.com/MarissaKWilson/makeitdark/master/darkreader.css';  \n\
     let cssPromise = fetch(cssPath).then(response => response.text());  \n\
    \n\
     /* Insert a style tag into the wrapper view */  \n\
@@ -62,7 +62,7 @@ if platform == "linux" or platform == "linux2":
 elif platform == "darwin":
     # OS X
     print("Detected OS X")
-    slack_theme_path = "/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js"
+    slack_theme_path = "/Applications/Slack.app/Contents/Resources/extracted-asar/dist/ssb-interop.bundle.js"
 else:
     # Probably Windows
     slack_root_path = os.path.join(os.environ['LOCALAPPDATA'], "slack")
